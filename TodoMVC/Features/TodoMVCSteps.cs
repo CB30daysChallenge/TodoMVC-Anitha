@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Framework.DBhelper;
+using System;
 using TechTalk.SpecFlow;
 
 namespace TodoMVC.Features
@@ -9,7 +10,7 @@ namespace TodoMVC.Features
         [Given(@"I have entered (.*) into the calculator")]
         public void GivenIHaveEnteredIntoTheCalculator(int p0)
         {
-            SQLServer.ExecuteQuery("", "");
+            Console.WriteLine(  SQLServer.ExecuteQuery("", "")); 
         }
         
         [When(@"I press add")]

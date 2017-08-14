@@ -10,7 +10,7 @@ namespace Framework.DBhelper
     {
         public static string ExecuteQuery(string query, string connectionString)
         {
-            return "";
+            return "Hello";
 
         }
     }

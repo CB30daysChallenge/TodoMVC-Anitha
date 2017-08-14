@@ -79,6 +79,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TodoMVC.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\TodoMVCSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -98,6 +99,12 @@
     <None Include="SpecRunTestProfile_2011_09.xsd">
       <SubType>Designer</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Framework\Framework.csproj">
+      <Project>{991334C9-6C9F-4418-B485-551195F6425D}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
