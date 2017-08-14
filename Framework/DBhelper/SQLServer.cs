@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Framework.DBhelper
 {
-    class SQLServer
+   public class SQLServer
     {
+        public static string ExecuteQuery(string query, string connectionString)
+        {
+            return "";
+
+        }
     }
 }
