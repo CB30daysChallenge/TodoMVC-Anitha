@@ -21,11 +21,11 @@ When  I add items to the list
 | Automation    |
 | BDD Scenarios |
 | Learn C#      |
-And  I click on checkbox of selected item
-| selecteditem |
+And  I click on checkbox of completed item
+| Completeditem  |
 | BDD Scenarios  |   
-Then I see the selected item striked out
-And  I see the checkbox ticked in green for selected item
+Then I see the completed item striked out
+And  I see the checkbox ticked in green for completed item
 And  I see number of items left, All button, Active button, Completed button
 And  I see clear completed button populated
 And  the number of items left count should match the number of Active items
@@ -78,7 +78,8 @@ And  I click on checkbox of completed item
 | BDD Scenarios |
 And   I click on Completed button to see all completed items
 Then  I see only completed items from the list
-And   I see the checkbox ticked in green for selected item
+Then  I see the completed item striked out
+And   I see the checkbox ticked in green for completed item
 And   I see number of items left, All button, Active button, Completed button
 And   I see clear completed button populated
 And   the number of items left count should match the number of Active items

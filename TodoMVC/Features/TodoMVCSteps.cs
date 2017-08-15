@@ -19,8 +19,8 @@ namespace TodoMVC.Features
          
         }
 
-        [When(@"I click on checkbox of selected item")]
-        public void WhenIClickOnCheckboxOfSelectedItem(Table table)
+        [When(@"I click on checkbox of completed item")]
+        public void WhenIClickOnCheckboxOfCompletedItem(Table table)
         {
 
         }
@@ -39,12 +39,6 @@ namespace TodoMVC.Features
 
         [When(@"I click on Active item checkbox")]
         public void WhenIClickOnActiveItemCheckbox()
-        {
-
-        }
-
-        [When(@"I click on checkbox of completed item")]
-        public void WhenIClickOnCheckboxOfCompletedItem(Table table)
         {
 
         }
@@ -97,6 +91,12 @@ namespace TodoMVC.Features
             
         }
 
+        [Then(@"I see the completed item striked out")]
+        public void ThenISeeTheCompletedItemStrikedOut()
+        {
+          
+        }
+
         [Then(@"I see number of items left, All button, Active button, Completed button")]
         public void ThenISeeNumberOfItemsLeftAllButtonActiveButtonCompletedButton()
         {
@@ -115,14 +115,8 @@ namespace TodoMVC.Features
            
         }
 
-        [Then(@"I see the selected item striked out")]
-        public void ThenISeeTheSelectedItemStrikedOut()
-        {
-            
-        }
-
-        [Then(@"I see the checkbox ticked in green for selected item")]
-        public void ThenISeeTheCheckboxTickedInGreenForSelectedItem()
+        [Then(@"I see the checkbox ticked in green for completed item")]
+        public void ThenISeeTheCheckboxTickedInGreenForCompletedItem()
         {
            
         }

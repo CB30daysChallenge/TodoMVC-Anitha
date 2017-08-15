@@ -117,15 +117,15 @@ testRunner.Given("I am on todomvc website", ((string)(null)), ((TechTalk.SpecFlo
 testRunner.When("I add items to the list", ((string)(null)), table2, "When ");
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
-                        "selecteditem"});
+                        "Completeditem"});
             table3.AddRow(new string[] {
                         "BDD Scenarios"});
 #line 24
-testRunner.And("I click on checkbox of selected item", ((string)(null)), table3, "And ");
+testRunner.And("I click on checkbox of completed item", ((string)(null)), table3, "And ");
 #line 27
-testRunner.Then("I see the selected item striked out", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I see the completed item striked out", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 28
-testRunner.And("I see the checkbox ticked in green for selected item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I see the checkbox ticked in green for completed item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 29
 testRunner.And("I see number of items left, All button, Active button, Completed button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 30
@@ -249,32 +249,34 @@ testRunner.And("I click on Completed button to see all completed items", ((strin
 #line 80
 testRunner.Then("I see only completed items from the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 81
-testRunner.And("I see the checkbox ticked in green for selected item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I see the completed item striked out", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 82
-testRunner.And("I see number of items left, All button, Active button, Completed button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I see the checkbox ticked in green for completed item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 83
-testRunner.And("I see clear completed button populated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I see number of items left, All button, Active button, Completed button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 84
-testRunner.And("the number of items left count should match the number of Active items", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I see clear completed button populated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 85
-testRunner.And("I see Completed button in selected state", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("the number of items left count should match the number of Active items", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 86
-testRunner.When("I click on completed item checkbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I see Completed button in selected state", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 87
+testRunner.When("I click on completed item checkbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 88
 testRunner.Then("the item disappears from the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Clear completed todo items from the list", new string[] {
-                "ClearCompletedItems"}, SourceLine=90)]
+                "ClearCompletedItems"}, SourceLine=91)]
         public virtual void ClearCompletedTodoItemsFromTheList()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Clear completed todo items from the list", new string[] {
                         "ClearCompletedItems"});
-#line 91
-this.ScenarioSetup(scenarioInfo);
 #line 92
+this.ScenarioSetup(scenarioInfo);
+#line 93
 testRunner.Given("I am on todomvc website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
@@ -285,42 +287,42 @@ testRunner.Given("I am on todomvc website", ((string)(null)), ((TechTalk.SpecFlo
                         "BDD Scenarios"});
             table8.AddRow(new string[] {
                         "Learn C#"});
-#line 93
+#line 94
 testRunner.When("I add items to the list", ((string)(null)), table8, "When ");
 #line hidden
             TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
                         "Completeditem"});
             table9.AddRow(new string[] {
                         "BDD Scenarios"});
-#line 98
+#line 99
 testRunner.And("I click on checkbox of completed item", ((string)(null)), table9, "And ");
-#line 101
-testRunner.Then("I see clear completed button populated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 102
-testRunner.When("I click on Clear completed button populated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I see clear completed button populated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 103
-testRunner.Then("I see completed items checkbox unticked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I click on Clear completed button populated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 104
-testRunner.And("I see number of items left, All button, Active button, Completed button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I see completed items checkbox unticked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 105
-testRunner.And("the number of items left count should match the number of Active items", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I see number of items left, All button, Active button, Completed button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 106
-testRunner.And("I do not see clear completed button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("the number of items left count should match the number of Active items", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 107
+testRunner.And("I do not see clear completed button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 108
 testRunner.And("I see All button in selected state", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Edit a todo item from the list", new string[] {
-                "EditTodoItem"}, SourceLine=110)]
+                "EditTodoItem"}, SourceLine=111)]
         public virtual void EditATodoItemFromTheList()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit a todo item from the list", new string[] {
                         "EditTodoItem"});
-#line 111
-this.ScenarioSetup(scenarioInfo);
 #line 112
+this.ScenarioSetup(scenarioInfo);
+#line 113
 testRunner.Given("I am on todomvc website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
@@ -331,29 +333,29 @@ testRunner.Given("I am on todomvc website", ((string)(null)), ((TechTalk.SpecFlo
                         "BDD Scenarios"});
             table10.AddRow(new string[] {
                         "Learn C#"});
-#line 113
+#line 114
 testRunner.When("I add items to the list", ((string)(null)), table10, "When ");
-#line 118
-testRunner.And("I double click on a todo item from the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 119
-testRunner.Then("I can edit a todo item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I double click on a todo item from the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 120
-testRunner.And("I see number of items left, All button, Active button, Completed button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I can edit a todo item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 121
+testRunner.And("I see number of items left, All button, Active button, Completed button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 122
 testRunner.And("the number of items left count should match the number of Active items", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Remove a todo item from the list", new string[] {
-                "RemoveTodoItem"}, SourceLine=124)]
+                "RemoveTodoItem"}, SourceLine=125)]
         public virtual void RemoveATodoItemFromTheList()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Remove a todo item from the list", new string[] {
                         "RemoveTodoItem"});
-#line 125
-this.ScenarioSetup(scenarioInfo);
 #line 126
+this.ScenarioSetup(scenarioInfo);
+#line 127
 testRunner.Given("I am on todomvc website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
@@ -364,19 +366,19 @@ testRunner.Given("I am on todomvc website", ((string)(null)), ((TechTalk.SpecFlo
                         "BDD Scenarios"});
             table11.AddRow(new string[] {
                         "Learn C#"});
-#line 127
+#line 128
 testRunner.When("I add items to the list", ((string)(null)), table11, "When ");
-#line 132
-testRunner.And("I see New item added to the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 133
-testRunner.And("I tick completed items in the checkbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I see New item added to the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 134
-testRunner.And("I click on \"x\" next to todo item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I tick completed items in the checkbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 135
-testRunner.Then("I see the todo item removed from the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I click on \"x\" next to todo item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 136
-testRunner.And("I see number of items left, All button, Active button, Completed button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I see the todo item removed from the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 137
+testRunner.And("I see number of items left, All button, Active button, Completed button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 138
 testRunner.And("the number of items left count should match the number of Active items", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
