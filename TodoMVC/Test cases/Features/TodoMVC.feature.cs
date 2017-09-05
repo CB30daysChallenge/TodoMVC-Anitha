@@ -10,14 +10,14 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace TodoMVC.Features
+namespace TodoMVC.TestCases.Features
 {
     using TechTalk.SpecFlow;
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("TodoMVC AngularJS", SourceFile="Features\\TodoMVC.feature", SourceLine=0)]
+    [TechTalk.SpecRun.FeatureAttribute("TodoMVC AngularJS", SourceFile="Test cases\\Features\\TodoMVC.feature", SourceLine=0)]
     public partial class TodoMVCAngularJSFeature
     {
         
