@@ -3,6 +3,7 @@ using System;
 using TechTalk.SpecFlow;
 using TodoMVC.PageObjectModels;
 
+
 namespace TodoMVC.Features
 {
     [Binding]
@@ -12,7 +13,7 @@ namespace TodoMVC.Features
         [Given(@"I am on todomvc website")]
         public void GivenIAmOnTodomvcWebsite()
         {
-            //TodoMVCPage todoMVCPage = new TodoMVCPage();
+            
             todoMVCPage.LaunchTodoMVCPage();
         
         }
@@ -20,7 +21,7 @@ namespace TodoMVC.Features
         [When(@"I add items to the list")]
         public void WhenIAddItemsToTheList(Table table)
         {
-         
+            todoMVCPage.AddItemsToTheList(table);
         }
 
         [When(@"I click on checkbox of completed item")]
@@ -92,7 +93,7 @@ namespace TodoMVC.Features
         [Then(@"I see checkbox in front of every todo item in the list")]
         public void ThenISeeCheckboxInFrontOfEveryTodoItemInTheList()
         {
-            
+            todoMVCPage.VerifyCheckboxExistsForEveryTodoItem();
         }
 
         [Then(@"I see the completed item striked out")]
@@ -104,19 +105,19 @@ namespace TodoMVC.Features
         [Then(@"I see number of items left, All button, Active button, Completed button")]
         public void ThenISeeNumberOfItemsLeftAllButtonActiveButtonCompletedButton()
         {
-            
+            todoMVCPage.VerifyButtonsExistInThePage();
         }
 
         [Then(@"the number of items left count should match the number of Active items")]
         public void ThenTheNumberOfItemsLeftCountShouldMatchTheNumberOfActiveItems()
         {
-           
+            todoMVCPage.VerifyNoOfItemsCountMatchesNoOfActiveItems();
         }
 
         [Then(@"I see All button in selected state")]
         public void ThenISeeAllButtonInSelectedState()
         {
-           
+            todoMVCPage.VerifyAllButtonIsInSelectedState();
         }
 
         [Then(@"I see the checkbox ticked in green for completed item")]

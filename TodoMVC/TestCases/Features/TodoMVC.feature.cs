@@ -17,7 +17,8 @@ namespace TodoMVC.TestCases.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("TodoMVC AngularJS", SourceFile="TestCases\\Features\\TodoMVC.feature", SourceLine=0)]
+    [NUnit.Framework.TestFixtureAttribute()]
+    [NUnit.Framework.DescriptionAttribute("TodoMVC AngularJS")]
     public partial class TodoMVCAngularJSFeature
     {
         
@@ -26,7 +27,7 @@ namespace TodoMVC.TestCases.Features
 #line 1 "TodoMVC.feature"
 #line hidden
         
-        [TechTalk.SpecRun.FeatureInitialize()]
+        [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
@@ -34,18 +35,19 @@ namespace TodoMVC.TestCases.Features
             testRunner.OnFeatureStart(featureInfo);
         }
         
-        [TechTalk.SpecRun.FeatureCleanup()]
+        [NUnit.Framework.OneTimeTearDownAttribute()]
         public virtual void FeatureTearDown()
         {
             testRunner.OnFeatureEnd();
             testRunner = null;
         }
         
+        [NUnit.Framework.SetUpAttribute()]
         public virtual void TestInitialize()
         {
         }
         
-        [TechTalk.SpecRun.ScenarioCleanup()]
+        [NUnit.Framework.TearDownAttribute()]
         public virtual void ScenarioTearDown()
         {
             testRunner.OnScenarioEnd();
@@ -61,8 +63,9 @@ namespace TodoMVC.TestCases.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Add items to list", new string[] {
-                "AddNewItems"}, SourceLine=3)]
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Add items to list")]
+        [NUnit.Framework.CategoryAttribute("AddNewItems")]
         public virtual void AddItemsToList()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add items to list", new string[] {
@@ -72,13 +75,26 @@ this.ScenarioSetup(scenarioInfo);
 #line 5
 testRunner.Given("I am on todomvc website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
+            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                        "todoitems"});
+            table1.AddRow(new string[] {
+                        "Automation"});
+            table1.AddRow(new string[] {
+                        "BDD Scenarios"});
+            table1.AddRow(new string[] {
+                        "Learn C#"});
+#line 6
+testRunner.When("I add items to the list", ((string)(null)), table1, "When ");
+#line 11
+testRunner.Then("I see checkbox in front of every todo item in the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 12
+testRunner.And("I see number of items left, All button, Active button, Completed button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 13
+testRunner.And("the number of items left count should match the number of Active items", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 14
+testRunner.And("I see All button in selected state", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
             this.ScenarioCleanup();
-        }
-        
-        [TechTalk.SpecRun.TestRunCleanup()]
-        public virtual void TestRunCleanup()
-        {
-            TechTalk.SpecFlow.TestRunnerManager.GetTestRunner().OnTestRunEnd();
         }
     }
 }

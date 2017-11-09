@@ -10,16 +10,14 @@ namespace TodoMVC.PageObjectModels
     class CBBase : SeleniumWebdriver
     {
 
-        /* BW Base class represents functions that are commona across all pages of the site  */
-
+ 
         internal IWebDriver Driver { get; set; }
 
         public CBBase(String urlOfPage)
         {
             Driver = WebDriver;
         }
-
-        //Start Transformation in progress
+     
         private const int DefaultWaitSeconds = 30;
         protected const bool NewImplementation = true;
 
