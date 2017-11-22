@@ -5,6 +5,7 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using TechTalk.SpecFlow;
 using log4net;
+using OpenQA.Selenium.Chrome;
 
 //[assembly: log4net.Config.XmlConfigurator(Watch = true)]
 
@@ -17,6 +18,8 @@ namespace TodoMVC.PageObjectModels
             {
                 PageFactory.InitElements(Driver, this);
             }
+
+        //IWebDriver driver = new ChromeDriver();
 
         public const string ToDoMvcHomePage = @"http://todomvc.com/examples/angularjs/#/";
 

@@ -1,4 +1,4 @@
-﻿Feature: TodoMVC AngularJS
+﻿Feature: TodoMVCAngularJS
 	
 @AddNewItems
 Scenario: Add items to list 
@@ -12,7 +12,7 @@ Then  I see checkbox in front of every todo item in the list
 And   I see number of items left, All button, Active button, Completed button
 And   the number of items left count should match the number of Active items
 And   I see All button in selected state 
-# 
+
 #@MarkItemAsCompleted
 #Scenario: Mark an Item as completed
 #Given I am on todomvc website

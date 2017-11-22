@@ -55,5 +55,16 @@ namespace TodoMVC.TestCases.SpecflowHooks
             Console.WriteLine("** Browser is Closed! ***");
 
         }
+        //[BeforeTestRun]
+        //[BeforeFeature]
+        //[BeforeScenario]
+        //[BeforeScenarioBlock]
+        //[BeforeStep]
+        //[AfterStep]
+        //[AfterScenarioBlock]
+        //[AfterScenario]
+        //[AfterFeature]
+        //[AfterTestRun]
+
     }
 }
